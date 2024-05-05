@@ -29,25 +29,24 @@ var map = new naver.maps.Map('map', mapOptions);
 
 // tileGridLayer.setMap(map);
 
+//오픈스트릿 맵 이미지타일형식 추가
+// var openStreetMapType = new naver.maps.ImageMapType({
+//     name: 'OSM',
+//     minZoom: 0,
+//     maxZoom: 19,
+//     tileSize: new naver.maps.Size(256, 256),
+//     projection: naver.maps.EPSG3857,
+//     repeatX: true,
+//     tileSet: "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
+//     provider: [{
+//         title: " /OpenStreetMap", // 출처 표기는 이미지 제공처의 정책을 따라야 합니다.
+//         link: "http://www.openstreetmap.org/copyright"
+//     }]
+// });
 
+// map.mapTypes.set('osm', openStreetMapType);
+// map.setMapTypeId('osm');
 
-
-var openStreetMapType = new naver.maps.ImageMapType({
-    name: 'OSM',
-    minZoom: 0,
-    maxZoom: 19,
-    tileSize: new naver.maps.Size(256, 256),
-    projection: naver.maps.EPSG3857,
-    repeatX: true,
-    tileSet: "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    provider: [{
-        title: " /OpenStreetMap", // 출처 표기는 이미지 제공처의 정책을 따라야 합니다.
-        link: "http://www.openstreetmap.org/copyright"
-    }]
-});
-
-map.mapTypes.set('osm', openStreetMapType);
-map.setMapTypeId('osm');
 
 //화면 좌표 offset Coordinate
 var myMenu = document.createElement('div');
