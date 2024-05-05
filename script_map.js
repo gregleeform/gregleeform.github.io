@@ -74,7 +74,7 @@ var marker = new naver.maps.Marker(markerOptions);
 var mapElement = map.getElement();
 
 var listener = naver.maps.Event.addDOMListener(mapElement, 'click', function() {
-    map.setZoom(8);
+    map.setZoom(19);
     map.setCenter(marker.getPosition());
 
     // naver.maps.Event.removeDOMListener(listener);
