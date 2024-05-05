@@ -6,6 +6,11 @@ var mapOptions = {
     mapTypeControlOptions: {
         style: naver.maps.MapTypeControlStyle.DROPDOWN
     },
+    padding: { top: 100 },
+    zoomControl:true,
+    zoomControlOptions: {
+        style: naver.maps.ZoomControlStyle.SMALL
+    }
     //mapTypeId: naver.maps.MapTypeId.HYBRID //하이브리드 맵으로 셋팅
 };
 
@@ -81,3 +86,23 @@ tileGridLayer.setMap(map);
 
 //     // naver.maps.Event.removeDOMListener(listener);
 // });
+
+//KVO상태 변경 알림
+
+var contentEl = $('<div class="iw_inner" style="width:350px;position:absolute;top:0;right:0;z-index:1000;background-color:#fff;border:solid 1px #333;">'
+    + '<h3>Map States</h3>'
+    + '<p style="font-size:14px;">zoom : <em class="zoom">'+ map.getZoom() +'</em></p>'
+    + '<p style="font-size:14px;">center : <em class="center">'+ map.getCenter() +'</em></p>'
+    + '<p style="font-size:14px;">bounds : <em class="bounds">'+ map.getBounds() +'</em></p>'
+    + '</div>');
+
+contentEl.appendTo(map.getElement());
+
+naver.maps.Event.addListener(map, 'zoom_changed', function(zoom) {
+    contentEl.find('.zoom').text(zoom);
+});
+
+naver.maps.Event.addListener(map, 'bounds_changed', function(bounds) {
+    contentEl.find('.center').text(map.getCenter());
+    contentEl.find('.bounds').text(bounds);
+});
