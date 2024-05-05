@@ -48,3 +48,17 @@ var openStreetMapType = new naver.maps.ImageMapType({
 
 map.mapTypes.set('osm', openStreetMapType);
 map.setMapTypeId('osm');
+
+//화면 좌표 offset Coordinate
+var myMenu = document.createElement('div');
+myMenu.style.position = 'absolute';
+myMenu.style.zIndex = 10000;
+
+map.getPanes().overlayLayer.appendChild(myMenu);
+
+naver.maps.Event.addListener(map, 'rightclick', function(e) {
+    var offset = e.offset;
+
+    myMenu.style.left = offset.x +'px';
+    myMenu.style.top = offset.y +'px';
+});
