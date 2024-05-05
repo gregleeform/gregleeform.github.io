@@ -22,15 +22,14 @@ var tileGridLayer = new naver.maps.Layer('tileGrid', {
     tileSize: new naver.maps.Size(256, 256),
     getTile: function(x, y, z) {
         // var div = document.querySelector('<div class="tilegrid">('+ [z, x, y].join(', ')+')</div>');
-        let div = $('<div class="tilegrid">('+ [z, x, y].join(', ')+')</div>'); //제이쿼리에서 자바스크립트 형식으로 변경
+        var div = document.querySelector('<div class="tilegrid">('+ [z, x, y].join(', ')+')</div>'); //제이쿼리에서 자바스크립트 형식으로 변경
+        
         return div[0];
     }
 });
 
 tileGridLayer.setMap(map);
 
-
-출처: https://whales.tistory.com/62 [허도경, limewhale:티스토리]
 
 //오픈스트릿 맵 이미지타일형식 추가
 // var openStreetMapType = new naver.maps.ImageMapType({
