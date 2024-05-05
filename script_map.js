@@ -49,15 +49,33 @@ var map = new naver.maps.Map('map', mapOptions);
 
 
 //화면 좌표 offset Coordinate
-var myMenu = document.createElement('div');
-myMenu.style.position = 'absolute';
-myMenu.style.zIndex = 10000;
+// var myMenu = document.createElement('div');
+// myMenu.style.position = 'absolute';
+// myMenu.style.zIndex = 10000;
 
-map.getPanes().overlayLayer.appendChild(myMenu);
+// map.getPanes().overlayLayer.appendChild(myMenu);
 
-naver.maps.Event.addListener(map, 'rightclick', function(e) {
-    var offset = e.offset;
+// naver.maps.Event.addListener(map, 'rightclick', function(e) {
+//     var offset = e.offset;
 
-    myMenu.style.left = offset.x +'px';
-    myMenu.style.top = offset.y +'px';
+//     myMenu.style.left = offset.x +'px';
+//     myMenu.style.top = offset.y +'px';
+// });
+
+//이벤트리스너 등록 및 제거
+var markerOptions = {
+    position: map.getCenter(),
+    map: map,
+    title: 'Click to zoom'
+};
+
+var marker = new naver.maps.Marker(markerOptions);
+
+var mapElement = map.getElement();
+
+var listener = naver.maps.Event.addDOMListener(mapElement, 'click', function() {
+    map.setZoom(8);
+    map.setCenter(marker.getPosition());
+
+    // naver.maps.Event.removeDOMListener(listener);
 });
