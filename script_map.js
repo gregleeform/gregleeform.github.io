@@ -22,7 +22,7 @@ var tileGridLayer = new naver.maps.Layer('tileGrid', {
     tileSize: new naver.maps.Size(256, 256),
     getTile: function(x, y, z) {
         // var div = document.querySelector('<div class="tilegrid">('+ [z, x, y].join(', ')+')</div>');
-        var div = document.querySelector('<div class="tilegrid">('+ [z, x, y].join(', ')+')</div>'); //제이쿼리에서 자바스크립트 형식으로 변경
+        var div = document.querySelectorAll('<div class="tilegrid">('+ [z, x, y].join(', ')+')</div>'); //제이쿼리에서 자바스크립트 형식으로 변경
         
         return div[0];
     }
