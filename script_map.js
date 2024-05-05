@@ -14,6 +14,7 @@ var map = new naver.maps.Map('map', mapOptions);
 
 
 //타일 그리드 지도 유형 넣기
+var div;
 var tileGridLayer = new naver.maps.Layer('tileGrid', {
     name: "TileGrid",
     minZoom: -1,
