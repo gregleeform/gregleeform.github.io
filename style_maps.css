@@ -1,0 +1,25 @@
+#wrap .tilegrid {
+    position: absolute;
+    z-index: 100;
+    font-size: 20px;
+    text-align: left;
+    color: #f00;
+    background-color: transparent;
+    border: solid 1px #f00;
+    width: 234px;
+    height: 234px;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+.mapcontainer {
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map {
+    width: 1920px;
+    height: 1080px;
+}
