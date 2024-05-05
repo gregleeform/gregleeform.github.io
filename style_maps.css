@@ -1,11 +1,11 @@
-.mapcontainer {
+#mapcontainer {
     margin: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.map {
+#map {
     width: 1920px;
     height: 1080px;
 }
