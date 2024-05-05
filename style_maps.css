@@ -1,4 +1,16 @@
-#wrap .tilegrid {
+.mapcontainer {
+    margin: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map {
+    width: 1920px;
+    height: 1080px;
+}
+
+.tilegrid {
     position: absolute;
     z-index: 100;
     font-size: 20px;
@@ -10,16 +22,4 @@
     height: 234px;
     padding: 10px;
     box-sizing: content-box;
-}
-
-.mapcontainer {
-    margin: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.map {
-    width: 1920px;
-    height: 1080px;
 }
