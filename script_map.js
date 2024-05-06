@@ -16,9 +16,25 @@ var mapOptions = {
     //mapTypeId: naver.maps.MapTypeId.HYBRID //하이브리드 맵으로 셋팅
 };
 
+var mapOptionsBgOl = {
+        zoom: 18,
+        center: position,
+        mapTypes: new naver.maps.MapTypeRegistry({
+          'normal': naver.maps.NaverStyleMapTypeOptions.getNormalMap(
+            {
+              overlayType: 'bg.ol'
+            }
+          )
+        }),
+        padding: { top: 100 },
+        zoomControl:true,
+        zoomControlOptions: {
+        style: naver.maps.ZoomControlStyle.SMALL
+        }       
+}
 
-var map = new naver.maps.Map('map', mapOptions);
-
+// var map = new naver.maps.Map('map', mapOptions); //기본맵 한국어 라벨있는것 
+var map = new naver.maps.Map('map', mapOptionsBgOl); //한국어 라벨 없앤것
 
 //타일 그리드 지도 유형 넣기
 var tileGridLayer = new naver.maps.Layer('tileGrid', {
