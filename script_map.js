@@ -33,6 +33,27 @@ var tileGridLayer = new naver.maps.Layer('tileGrid', {
 
 tileGridLayer.setMap(map);
 
+//초록색 마커추가
+var greenMarker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.3613962, 127.1112487),
+    map: map,
+    title: 'Green',
+    icon: {
+        content: [
+                    '<div class="cs_mapbridge">',
+                        '<div class="map_group _map_group crs">',
+                            '<div class="map_marker _marker num1 num1_big"> ',
+                                '<span class="ico _icon"></span>',
+                                '<span class="shd"></span>',
+                            '</div>',
+                        '</div>',
+                    '</div>'
+                ].join(''),
+        size: new naver.maps.Size(38, 58),
+        anchor: new naver.maps.Point(19, 58),
+    },
+    draggable: true
+});
 
 //오픈스트릿 맵 이미지타일형식 추가
 // var openStreetMapType = new naver.maps.ImageMapType({

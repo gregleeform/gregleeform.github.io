@@ -23,3 +23,28 @@
     padding: 10px;
     box-sizing: content-box;
 }
+
+/* 마커관련 */
+.cs_mapbridge .map_group .map_marker .ico {
+    position: absolute;
+    background: url(https://navermaps.github.io/maps.js.ncp/docs/img/example/sp_mapbridge5.png) no-repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-size: 400px 450px;
+    -webkit-background-size: 400px 450px;
+    z-index: 10;
+}
+
+.cs_mapbridge .crs .map_marker[class*="_big"] .ico {
+    width: 38px;
+    height: 58px;
+}
+
+.cs_mapbridge .crs .map_marker.num1_big .ico {
+    background-position: -160px -215px;
+    background-size: 400px 450px;
+    -webkit-background-size: 400px 450px;
+    transform-origin: 19px 54px;
+    -webkit-transform-origin: 19px 54px;
+}
