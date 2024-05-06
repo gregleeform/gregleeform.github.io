@@ -35,7 +35,7 @@ tileGridLayer.setMap(map);
 
 //초록색 마커추가
 var greenMarker = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.3613962, 127.1112487),
+    position: new naver.maps.LatLng(35.22471386234804, 35.22471386234804),
     map: map,
     title: 'Green',
     icon: {
