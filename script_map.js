@@ -107,7 +107,6 @@ var greenMarker = new naver.maps.Marker({
 // });
 
 //KVO상태 변경 알림
-
 var contentEl = $('<div class="iw_inner" style="width:350px;position:absolute;top:0;right:0;z-index:1000;background-color:#fff;border:solid 1px #333;">'
     + '<h3>Map States</h3>'
     + '<p style="font-size:14px;">zoom : <em class="zoom">'+ map.getZoom() +'</em></p>'
