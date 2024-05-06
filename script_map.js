@@ -1,7 +1,8 @@
 
 var HOME_PATH = window.HOME_PATH || '.'; //홈패쓰 추가
+var position = new naver.maps.LatLng(35.22471386234804, 128.68400799201314);
 var mapOptions = {
-    center: new naver.maps.LatLng(35.22471386234804, 128.68400799201314),
+    center: position,
     zoom: 18,
     mapTypeControl: true,
     mapTypeControlOptions: {
@@ -40,7 +41,7 @@ var markerOptions = {
     map: map,
     icon: {
         url: HOME_PATH +'/img_maps/marker01.png',
-        size: new naver.maps.Size(50, 52),
+        size: new naver.maps.Size(50, 56),
         origin: new naver.maps.Point(0, 0),
         anchor: new naver.maps.Point(25, 52)
     },
