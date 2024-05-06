@@ -1,4 +1,5 @@
 
+var HOME_PATH = window.HOME_PATH || '.'; //홈패쓰 추가
 var mapOptions = {
     center: new naver.maps.LatLng(35.22471386234804, 128.68400799201314),
     zoom: 18,
@@ -33,27 +34,42 @@ var tileGridLayer = new naver.maps.Layer('tileGrid', {
 
 tileGridLayer.setMap(map);
 
-//초록색 마커추가
-var greenMarker = new naver.maps.Marker({
-    position: new naver.maps.LatLng(35.22471386234804, 128.68400799201314),
+//이미지 아이콘 사용하기
+var markerOptions = {
+    position: position.destinationPoint(90, 15),
     map: map,
-    title: 'Green',
     icon: {
-        content: [
-                    '<div class="cs_mapbridge">',
-                        '<div class="map_group _map_group crs">',
-                            '<div class="map_marker _marker num1 num1_big"> ',
-                                '<span class="ico _icon"></span>',
-                                '<span class="shd"></span>',
-                            '</div>',
-                        '</div>',
-                    '</div>'
-                ].join(''),
-        size: new naver.maps.Size(38, 58),
-        anchor: new naver.maps.Point(19, 58),
+        url: HOME_PATH +'/img_maps/marker01.png',
+        size: new naver.maps.Size(50, 52),
+        origin: new naver.maps.Point(0, 0),
+        anchor: new naver.maps.Point(25, 52)
     },
     draggable: true
-});
+};
+
+var marker = new naver.maps.Marker(markerOptions);
+
+//초록색 마커추가
+// var greenMarker = new naver.maps.Marker({
+//     position: new naver.maps.LatLng(35.22471386234804, 128.68400799201314),
+//     map: map,
+//     title: 'Green',
+//     icon: {
+//         content: [
+//                     '<div class="cs_mapbridge">',
+//                         '<div class="map_group _map_group crs">',
+//                             '<div class="map_marker _marker num1 num1_big"> ',
+//                                 '<span class="ico _icon"></span>',
+//                                 '<span class="shd"></span>',
+//                             '</div>',
+//                         '</div>',
+//                     '</div>'
+//                 ].join(''),
+//         size: new naver.maps.Size(38, 58),
+//         anchor: new naver.maps.Point(19, 58),
+//     },
+//     draggable: true
+// });
 
 //오픈스트릿 맵 이미지타일형식 추가
 // var openStreetMapType = new naver.maps.ImageMapType({
