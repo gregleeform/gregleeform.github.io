@@ -44,6 +44,34 @@ var mapOptionsBgOl = {
 // var map = new naver.maps.Map('map', mapOptions); //기본맵 한국어 라벨있는것 
 var map = new naver.maps.Map('map', mapOptionsBgOl); //한국어 라벨 없앤것
 
+//자전거레이어 추가하기
+var bicycleLayer = new naver.maps.BicycleLayer();
+
+var btn = $('#bicycle');
+
+naver.maps.Event.addListener(map, 'bicycleLayer_changed', function(bicycleLayer) {
+    if (bicycleLayer) {
+        btn.addClass('control-on');
+    } else {
+        btn.removeClass('control-on');
+    }
+});
+
+btn.on("click", function(e) {
+    e.preventDefault();
+
+    if (bicycleLayer.getMap()) {
+        bicycleLayer.setMap(null);
+    } else {
+        bicycleLayer.setMap(map);
+    }
+});
+
+naver.maps.Event.once(map, 'init', function() {
+    bicycleLayer.setMap(map);
+});
+
+
 //타일 그리드 지도 유형 넣기
 var tileGridLayer = new naver.maps.Layer('tileGrid', {
     name: "TileGrid",
