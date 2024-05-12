@@ -31,13 +31,13 @@ var mapOptionsBgOl = {
         mapTypeControl: true,
         mapTypeControlOptions: {
         style: naver.maps.MapTypeControlStyle.DROPDOWN,
-        position: naver.maps.Position.LEFT_BOTTOM
+        position: naver.maps.Position.LEFT_CENTER
         },
         padding: { top: 100 },
         zoomControl:true,
         zoomControlOptions: {
         style: naver.maps.ZoomControlStyle.SMALL,
-        position: naver.maps.Position.BOTTOM_CENTER
+        position: naver.maps.Position.BOTTOM_LEFT
         }       
 }
 
