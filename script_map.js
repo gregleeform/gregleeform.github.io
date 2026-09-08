@@ -90,20 +90,20 @@ naver.maps.Event.once(map, 'init', function() {
 });
 
 
-//타일 그리드 지도 유형 넣기
-var tileGridLayer = new naver.maps.Layer('tileGrid', {
-    name: "TileGrid",
-    minZoom: -1,
-    maxZoom: 14,
-    tileSize: new naver.maps.Size(256, 256),
-    getTile: function(x, y, z) {
-        var div = $('<div class="tilegrid">('+ [z, x, y].join(', ')+')</div>');
-                
-        return div[0];
-    }
-});
+//타일 그리드 지도 유형 넣기 (디버깅용 빨간 격자 — 필요할 때만 주석을 푸세요)
+// var tileGridLayer = new naver.maps.Layer('tileGrid', {
+//     name: "TileGrid",
+//     minZoom: -1,
+//     maxZoom: 14,
+//     tileSize: new naver.maps.Size(256, 256),
+//     getTile: function(x, y, z) {
+//         var div = $('<div class="tilegrid">('+ [z, x, y].join(', ')+')</div>');
 
-tileGridLayer.setMap(map);
+//         return div[0];
+//     }
+// });
+
+// tileGridLayer.setMap(map);
 
 //이미지 아이콘 사용하기
 var markerOptions = {
@@ -177,21 +177,21 @@ var marker = new naver.maps.Marker(markerOptions);
 //     // naver.maps.Event.removeDOMListener(listener);
 // });
 
-//KVO상태 변경 알림
-var contentEl = $('<div class="iw_inner" style="width:350px;position:absolute;top:0;right:0;z-index:1000;background-color:#fff;border:solid 1px #333;">'
-    + '<h3>Map States</h3>'
-    + '<p style="font-size:11px;">zoom : <em class="zoom">'+ map.getZoom() +'</em></p>'
-    + '<p style="font-size:11px;">center : <em class="center">'+ map.getCenter() +'</em></p>'
-    + '<p style="font-size:11px;">bounds : <em class="bounds">'+ map.getBounds() +'</em></p>'
-    + '</div>');
+//KVO상태 변경 알림 (지도 상태를 화면에 찍어보는 디버깅 패널 — 필요할 때만 주석을 푸세요)
+// var contentEl = $('<div class="iw_inner" style="width:350px;position:absolute;top:0;right:0;z-index:1000;background-color:#fff;border:solid 1px #333;">'
+//     + '<h3>Map States</h3>'
+//     + '<p style="font-size:11px;">zoom : <em class="zoom">'+ map.getZoom() +'</em></p>'
+//     + '<p style="font-size:11px;">center : <em class="center">'+ map.getCenter() +'</em></p>'
+//     + '<p style="font-size:11px;">bounds : <em class="bounds">'+ map.getBounds() +'</em></p>'
+//     + '</div>');
 
-contentEl.appendTo(map.getElement());
+// contentEl.appendTo(map.getElement());
 
-naver.maps.Event.addListener(map, 'zoom_changed', function(zoom) {
-    contentEl.find('.zoom').text(zoom);
-});
+// naver.maps.Event.addListener(map, 'zoom_changed', function(zoom) {
+//     contentEl.find('.zoom').text(zoom);
+// });
 
-naver.maps.Event.addListener(map, 'bounds_changed', function(bounds) {
-    contentEl.find('.center').text(map.getCenter());
-    contentEl.find('.bounds').text(bounds);
-});
+// naver.maps.Event.addListener(map, 'bounds_changed', function(bounds) {
+//     contentEl.find('.center').text(map.getCenter());
+//     contentEl.find('.bounds').text(bounds);
+// });
