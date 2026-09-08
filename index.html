@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
-    <title>Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>이명훈 (Greg Lee) · 건축 · 경관 디자이너</title>
+    <meta name="description" content="건축·경관 디자이너 이명훈(Greg Lee)의 온라인 명함. 소개와 다루는 도구, 취미, 연락처를 한 장에 담았습니다.">
+    <meta name="author" content="이명훈 (Greg Lee)">
+    <link rel="canonical" href="https://gregleeform.github.io/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="이명훈 (Greg Lee)">
+    <meta property="og:title" content="이명훈 (Greg Lee) · 건축 · 경관 디자이너">
+    <meta property="og:description" content="건축·경관 디자이너 이명훈(Greg Lee)의 온라인 명함. 소개와 다루는 도구, 취미, 연락처를 한 장에 담았습니다.">
+    <meta property="og:url" content="https://gregleeform.github.io/">
+    <meta property="og:image" content="https://gregleeform.github.io/assets/profile.jpg">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="이명훈 (Greg Lee) · 건축 · 경관 디자이너">
+    <meta name="twitter:description" content="건축·경관 디자이너 이명훈(Greg Lee)의 온라인 명함.">
+    <meta name="twitter:image" content="https://gregleeform.github.io/assets/profile.jpg">
+    <meta name="theme-color" content="#5F5DFE">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,9 +38,9 @@
         <header class="profile__header">
             <div class="profile__highlight__wrapper">
                 <div class="profile__highlight">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="24"
-                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
                         <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
@@ -28,32 +50,59 @@
                 부경대학교
             </div>
             <div class="profile__avatar">
-                <img src="assets/profile.jpg" loading="lazy" alt="Mentor profile">
+                <img src="assets/profile.jpg" loading="lazy" alt="이명훈 프로필 사진">
             </div>
             <div class="profile__highlight__wrapper">
                 <div class="profile__highlight">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="24"
-                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sparkles"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                        <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 1 0 0 4h2a2 2 0 1 1 0 4h-2a2 2 0 0 1 -1.8 -1" />
-                        <path d="M12 7v10" />
+                        <path
+                            d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2zm-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6z" />
                     </svg>
-                    ₩220-250
+                    경관 · AI
                 </div>
-                희망급여
+                요즘 관심사
             </div>
         </header>
+
         <div class="profile__name">
-            <h2>이명훈 (Greg Lee)<img src="assets/verified.svg" alt="Verified Ticker"></h2>
-            <p>건축디자이너, 경관디자이너, 프롬프트 크래프터 </p>
+            <h1>이명훈 (Greg Lee)<img src="assets/verified.svg" alt="" aria-hidden="true"></h1>
+            <p>건축디자이너, 경관디자이너, 프롬프트 크래프터</p>
         </div>
+
+        <div class="profile__actions">
+            <a class="btn btn--primary" href="mailto:oyoondal@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                    <path d="M3 7l9 6l9 -6" />
+                </svg>
+                이메일 보내기
+            </a>
+            <a class="btn" href="resume.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                    <path d="M9 9l1 0" />
+                    <path d="M9 13l6 0" />
+                    <path d="M9 17l6 0" />
+                </svg>
+                이력서 보기
+            </a>
+        </div>
+
         <ul class="social-links">
             <li>
-                <a href="https://www.youtube.com/@greglee89"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube"
+                <a href="https://www.youtube.com/@greglee89" target="_blank" rel="noopener noreferrer"
+                    aria-label="유튜브 채널 (새 창)">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube"
                         width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
                         <path d="M10 9l5 3l-5 3z" />
@@ -61,10 +110,11 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/myeong-hoon-lee-113223205/">
+                <a href="https://www.linkedin.com/in/myeong-hoon-lee-113223205/" target="_blank"
+                    rel="noopener noreferrer" aria-label="링크드인 프로필 (새 창)">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
                         width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
                         <path d="M8 11l0 5" />
@@ -75,19 +125,23 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.flickr.com/people/186149408@N05/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-flickr">
+                <a href="https://www.flickr.com/people/186149408@N05/" target="_blank" rel="noopener noreferrer"
+                    aria-label="플리커 사진첩 (새 창)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-flickr" aria-hidden="true">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M7 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
                         <path d="M17 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                      </svg>
+                    </svg>
                 </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/oyoondal/">
+                <a href="https://www.instagram.com/oyoondal/" target="_blank" rel="noopener noreferrer"
+                    aria-label="인스타그램 (새 창)">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
                         width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
                         <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
@@ -95,12 +149,12 @@
                     </svg>
                 </a>
             </li>
-
             <li>
-                <a href="https://github.com/gregleeform">
+                <a href="https://github.com/gregleeform" target="_blank" rel="noopener noreferrer"
+                    aria-label="깃허브 (새 창)">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24"
                         height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path
                             d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
@@ -108,92 +162,86 @@
                 </a>
             </li>
             <li>
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24"
+                <a href="maps.html" aria-label="직접 만든 자전거길 지도">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map" width="24"
                         height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M9 15l6 -6" />
-                        <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                        <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                        <path d="M3 7l6 -3l6 3l6 -3v13l-6 3l-6 -3l-6 3v-13" />
+                        <path d="M9 4v13" />
+                        <path d="M15 7v13" />
                     </svg>
                 </a>
             </li>
         </ul>
+
         <main>
             <div class="tabs-wrapper">
-                <ul class="tabs">
-                    <li class="active">
-                        <a id="tab1" href="#about">소개</a>
+                <ul class="tabs" role="tablist" aria-label="프로필 섹션">
+                    <li role="presentation">
+                        <a id="tab1" class="active" role="tab" href="#tab1-content" aria-controls="tab1-content"
+                            aria-selected="true" tabindex="0">소개</a>
                     </li>
-                    <li>
-                        <a id="tab2" href="#skills">기술</a>
+                    <li role="presentation">
+                        <a id="tab2" role="tab" href="#tab2-content" aria-controls="tab2-content" aria-selected="false"
+                            tabindex="-1">기술</a>
                     </li>
-                    <li>
-                        <a id="tab3" href="#hobby">취미</a>
+                    <li role="presentation">
+                        <a id="tab3" role="tab" href="#tab3-content" aria-controls="tab3-content" aria-selected="false"
+                            tabindex="-1">취미</a>
                     </li>
-                    <li id="active-bg"></li>
+                    <li id="active-bg" role="presentation" aria-hidden="true"></li>
                 </ul>
             </div>
-            <div id="tab1-content" class="tab-content tab-content--active">
+
+            <div id="tab1-content" class="tab-content tab-content--active" role="tabpanel" aria-labelledby="tab1">
                 <p>
-                    저는 인테리어 CAD 보조 아르바이트부터 건축 인턴십까지 다양한 경험을 쌓은 건축 전공자입니다.
-                     경관디자인 회사에서의 업무를 통해 소통과 협력의 중요성을 배우고, 자기 계발에 열정적으로 임하며 새로운 기술을 습득하는 노력을 기울이고 있습니다. 
-                     열정과 끈기를 바탕으로 다양한 분야에서 성장하고 싶습니다. 
+                    인테리어 CAD 보조 아르바이트부터 건축 인턴십까지 여러 현장을 거친 건축 전공자입니다.
+                    경관디자인 회사에서 일하며 소통과 협업의 중요성을 배웠고, 요즘은 새로운 기술을 익히는 데 재미를 붙였습니다.
+                    열정과 끈기를 바탕으로 여러 분야에서 계속 성장하고 싶습니다.
                 </p>
-                <h3>I can help with 🔥
-                </h3>
+                <h2>이런 걸 도와드릴 수 있어요 🔥</h2>
+                <ul class="tags">
+                    <li>아이디어 연구</li>
+                    <li>3D 모델링 · 2D 드래프팅</li>
+                    <li>디자인 제안서</li>
+                </ul>
                 <ul class="content-links">
-                    <li><a href="#idea-development">아이디어 연구</a></li>
-                    <li><a href="#draft">3D모델링 2D 드래프팅</a></li>
-                    <li><a href="#proposal">디자인 제안서</a></li>
+                    <li><a href="resume.html">경력과 프로젝트 자세히 보기 →</a></li>
                 </ul>
             </div>
-            <div id="tab2-content" class="tab-content">
+
+            <div id="tab2-content" class="tab-content" role="tabpanel" aria-labelledby="tab2">
                 <p>
-                    건축관련 기술 뿐아니라 인공지능등 최신기술을 배우는데 노력하고 있습니다. ✏️
+                    건축 관련 기술뿐 아니라 인공지능 같은 최신 기술도 꾸준히 배우고 있습니다. ✏️
                 </p>
+                <ul class="tags">
+                    <li>일러스트레이터 <span class="tag__level">중상급</span></li>
+                    <li>스케치업 · 라이노 <span class="tag__level">중급</span></li>
+                    <li>파이썬 <span class="tag__level">중급</span></li>
+                    <li>AI 프롬프팅 <span class="tag__level">중급</span></li>
+                    <li>GIS 지리정보시스템 <span class="tag__level">초급</span></li>
+                </ul>
                 <ul class="content-links">
-                    <li>
-                        <a href="#illustration">
-                            일러스트레이터 (중상급)
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#GIS">
-                            GIS 지리정보시스템 (초급)
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#3d-modeling">
-                            스케치업 및 라이노 (중급)
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#python">
-                            파이썬 프로그래밍 언어 (중급)
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#prompt-crafting">
-                            인공지능 프롬프팅 (중급)
-                        </a>
-                    </li>
+                    <li><a href="maps.html">🚲 직접 만들어 본 자전거길 지도 →</a></li>
+                    <li><a href="resume.html#skills">기술 이력 자세히 보기 →</a></li>
                 </ul>
             </div>
-            <div id="tab3-content" class="tab-content">
+
+            <div id="tab3-content" class="tab-content" role="tabpanel" aria-labelledby="tab3">
                 <p>
-                    몇가지 취미를 소개합니다. 🌞
+                    몇 가지 취미를 소개합니다. 🌞
                 </p>
                 <ul class="reviews">
                     <li>
                         <article class="review">
                             <div class="review__avatar">
-                                <img src="assets/camera.jpg" alt="Hobby">
+                                <img src="assets/camera.jpg" loading="lazy" alt="풍경 사진을 찍는 카메라">
                             </div>
                             <div class="review__content">
-                                <h4>사진촬영</h4>
+                                <h3>사진 촬영</h3>
                                 <p>
-                                    풍경사진을 찍는 것을 좋아합니다. Canon eos 500d로 시작하여 Nikon z30 미러리스 카메라를 사용하고 있습니다. 📷
+                                    풍경 사진 찍는 것을 좋아합니다. Canon EOS 500D로 시작해 지금은 Nikon Z30 미러리스를 쓰고 있어요. 📷
                                 </p>
                             </div>
                         </article>
@@ -201,12 +249,12 @@
                     <li>
                         <article class="review">
                             <div class="review__avatar">
-                                <img src="assets/ride.jpg" alt="Hobby">
+                                <img src="assets/ride.jpg" loading="lazy" alt="자전거 라이딩">
                             </div>
                             <div class="review__content">
-                                <h4>자전거 라이딩</h4>
+                                <h3>자전거 라이딩</h3>
                                 <p>
-                                    자전거라이딩을 가끔씩합니다. 자전거길을 따라 논길을  달리는것도 좋아하고, 최근에는 산악자전거로 MTB대회에도 참가한적이 있습니다. 🚴‍♂️
+                                    가끔씩 자전거를 탑니다. 자전거길 따라 논길 달리는 것도 좋아하고, 최근에는 산악자전거로 MTB 대회에 나가 본 적도 있어요. 🚴
                                 </p>
                             </div>
                         </article>
@@ -214,12 +262,12 @@
                     <li>
                         <article class="review">
                             <div class="review__avatar">
-                                <img src="assets/books.jpg" alt="Hobby">
+                                <img src="assets/books.jpg" loading="lazy" alt="쌓여 있는 책들">
                             </div>
                             <div class="review__content">
-                                <h4>독서</h4>
+                                <h3>독서</h3>
                                 <p>
-                                    책을 사는것을 좋아합니다. 관심있는 책이 있다면 서점에 가서 직접보고 마음에 들면 사서 읽어요. 📖
+                                    책 사는 것을 좋아합니다. 관심 가는 책이 있으면 서점에 가서 직접 보고, 마음에 들면 사서 읽어요. 📖
                                 </p>
                             </div>
                         </article>
@@ -228,7 +276,35 @@
             </div>
         </main>
 
+        <footer class="profile__footer">
+            <a href="mailto:oyoondal@gmail.com">oyoondal@gmail.com</a>
+        </footer>
     </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "이명훈",
+      "alternateName": "Greg Lee",
+      "url": "https://gregleeform.github.io/",
+      "image": "https://gregleeform.github.io/assets/profile.jpg",
+      "email": "mailto:oyoondal@gmail.com",
+      "jobTitle": "건축디자이너 · 경관디자이너",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "부경대학교"
+      },
+      "knowsAbout": ["건축 디자인", "경관 디자인", "3D 모델링", "GIS", "파이썬", "AI 프롬프팅"],
+      "sameAs": [
+        "https://www.linkedin.com/in/myeong-hoon-lee-113223205/",
+        "https://github.com/gregleeform",
+        "https://www.youtube.com/@greglee89",
+        "https://www.instagram.com/oyoondal/",
+        "https://www.flickr.com/people/186149408@N05/"
+      ]
+    }
+    </script>
     <script src="script.js"></script>
 </body>
 

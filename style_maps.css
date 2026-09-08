@@ -1,13 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    color: #23262C;
+}
+
+.map-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 3.5rem;
+    padding: 0 1rem;
+    border-bottom: 1px solid #E2E4E9;
+    background: #fff;
+}
+
+.map-nav h1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.map-nav a {
+    font-size: 0.9rem;
+    color: #5B58A9;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.map-nav a:hover {
+    text-decoration: underline;
+}
+
 #mapcontainer {
-    margin: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #map {
-    width: 1920px;
-    height: 1080px;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
 }
 
 .tilegrid {
@@ -28,10 +66,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index:1000;
+    z-index: 1000;
     padding: 5px;
 }
-.buttons .control-btn{
+
+.buttons .control-btn {
     margin: 0 5px 5px 0;
-    
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #E2E4E9;
+    border-radius: 0.4rem;
+    background: #fff;
+    cursor: pointer;
 }

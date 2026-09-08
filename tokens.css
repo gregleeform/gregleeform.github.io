@@ -1,0 +1,112 @@
+/* 두 페이지(명함 index.html, 이력서 resume.html)가 공유하는 디자인 토큰과 전역 리셋 */
+
+:root {
+    color-scheme: light dark;
+
+    /* 브랜드 */
+    --primary: #5F5DFE;
+    --primary-darker: #4F4DFE;
+    --active: #5B58A9;
+
+    /* 표면 */
+    --bg: #c7c7d8;
+    --white: #FFF;
+    --profile-bg: #FFFFFD;
+    --socials-bg: #f2f3f5;
+    --highlight-bg: #F9FAFC;
+    --border-color: #EAEBEE;
+
+    /* 텍스트 (WCAG AA 이상 대비) */
+    --text: #4A4D55;
+    --text-bg: #6B6F78;
+    --social-color: #4A4D55;
+
+    /* 이력서 */
+    --ink: #23262C;
+    --muted: #6B6F78;
+    --rule: #E2E4E9;
+    --accent-bg: #F3F3FF;
+
+    /* 탭 */
+    --tab-bg: #EBE9FF;
+    --tabs-border: #F2F6F5;
+    --tab-width: 7rem;
+    --tabs-gap: 0rem;
+    --tab-radius: 0.4rem;
+
+    --scrollbar-thumb: #d5d4ea;
+    --scrollbar-bg: #F2F6F5;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #8886FF;
+        --primary-darker: #9C9AFF;
+        --active: #A9A7FF;
+
+        --bg: #131419;
+        --white: #FFF;
+        --profile-bg: #1D1F26;
+        --socials-bg: #262932;
+        --highlight-bg: #22252D;
+        --border-color: #333743;
+
+        --text: #C9CCD4;
+        --text-bg: #9AA0AC;
+        --social-color: #C9CCD4;
+
+        --ink: #E8EAF0;
+        --muted: #9AA0AC;
+        --rule: #333743;
+        --accent-bg: #262932;
+
+        --tab-bg: #33355A;
+        --tabs-border: #2B2E38;
+
+        --scrollbar-thumb: #3A3E4B;
+        --scrollbar-bg: #22252D;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+}
+
+*::selection {
+    background: var(--primary);
+    color: #FFF;
+}
+
+*::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--scrollbar-bg);
+    border-radius: 9.99rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 9.99rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
