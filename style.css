@@ -1,24 +1,9 @@
 /*
  * 이명훈의 홈페이지
- * 미색 바탕(솔라라이즈드 라이트 계열)에 KoPubWorld바탕체.
+ * 미색 바탕(솔라라이즈드 라이트 계열)에 나눔명조.
+ * 나눔명조는 index.html에서 구글 폰트로 불러옵니다.
  * 색은 아래 :root에서만 고치면 됩니다.
  */
-
-/* 본문 서체: KoPubWorld바탕체를 이 페이지에 쓰인 글자만 남겨 줄인 파일.
-   라이선스상 줄인 파일에는 'KoPub' 이름을 쓸 수 없어 이름을 바꿨습니다. (fonts/LICENSE-KoPub.md) */
-@font-face {
-    font-family: "GL Batang Web";
-    src: url("fonts/gl-batang-regular.woff2") format("woff2");
-    font-weight: 400;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "GL Batang Web";
-    src: url("fonts/gl-batang-bold.woff2") format("woff2");
-    font-weight: 700;
-    font-display: swap;
-}
 
 :root {
     color-scheme: light;
@@ -47,7 +32,7 @@ body {
     margin: 0;
     background: var(--paper);
     color: var(--ink);
-    font-family: "GL Batang Web", "KoPubWorld Batang", "KoPubWorldBatang", "AppleMyungjo", "Batang", "바탕", serif;
+    font-family: "Nanum Myeongjo", "나눔명조", "NanumMyeongjo", "AppleMyungjo", "Batang", "바탕", serif;
     font-size: 17px;
     line-height: 1.8;
     word-break: keep-all;
