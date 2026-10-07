@@ -1,22 +1,24 @@
 # gregleeform.github.io
 
-이명훈(Greg Lee)의 개인 사이트. GitHub Pages로 <https://gregleeform.github.io/> 에 배포됩니다.
+이명훈(Greg Lee)의 개인 홈페이지. GitHub Pages로 <https://gregleeform.github.io/> 에 배포됩니다.
 
-## 페이지 구성
+2000년대에 HTML을 손으로 짜던 개인 홈페이지 느낌을 따릅니다. 한 줄로 쭉 읽히는 글, 게시판 모양의 표,
+미색 바탕(솔라라이즈드 라이트 계열)에 KoPubWorld바탕체.
+
+## 페이지
 
 | 페이지 | 용도 |
 | --- | --- |
-| `index.html` | **온라인 명함.** 처음 만나는 사람에게 링크 하나로 보내는 소개 카드. 소개 · 기술 · 취미 탭, 이메일/이력서 버튼. |
-| `resume.html` | **이력서.** 경력 · 프로젝트 · 기술 · 학력. 브라우저에서 그대로 A4 PDF로 저장할 수 있습니다. |
-| `maps.html` | 네이버 지도 API로 만들어 본 자전거길 지도. 이력서의 프로젝트 항목에서 연결됩니다. |
+| `index.html` | 홈페이지. 소개 · 만든 것들 · 다루는 것 · 새 소식 · 연락처 |
+| `maps.html` | 네이버 지도 API로 만들어 본 자전거길 지도 |
 
 ## 파일
 
-- `tokens.css` — 두 페이지가 함께 쓰는 색·간격 토큰과 전역 리셋. 다크 모드 대응 포함. 색을 바꾸려면 여기만 고치면 됩니다.
-- `style.css` — 명함 전용 스타일
-- `resume.css` — 이력서 전용 스타일 + 인쇄(`@media print`) 스타일
-- `script.js` — 명함의 탭 (클릭 + 좌우 방향키)
-- `script_map.js`, `style_maps.css`, `img_maps/` — 지도 페이지
+- `style.css` — 홈페이지 스타일. 색은 맨 위 `:root`에서만 고치면 됩니다.
+- `fonts/` — 본문 서체. KoPubWorld바탕체를 페이지에 쓰인 글자만 남겨 줄인 파일과 라이선스(`LICENSE-KoPub.md`).
+- `assets/` — 사진(`profile.jpg`)과 유튜브 영상 썸네일
+- `tools/subset_font.py` — 서체를 다시 줄이는 스크립트 (아래 참고)
+- `maps.html`, `script_map.js`, `style_maps.css`, `img_maps/` — 지도 페이지
 
 빌드 도구가 없는 정적 사이트입니다. 로컬에서 보려면:
 
@@ -25,29 +27,34 @@ python3 -m http.server 8000
 # http://localhost:8000/
 ```
 
-## 이력서 채워 넣기
+## 고치는 법
 
-`resume.html`은 지금 **골격만 있는 초안**입니다. 채워 넣는 순서:
+- **새 소식** — `index.html`의 `#news` 표 맨 위에 `<tr>`을 하나 더하고 번호를 1 올립니다.
+  새 글에는 `<span class="new" title="새 글">N</span>`을 붙이고, 오래되면 떼어 냅니다.
+- **만든 것들** — `#works` 표에서 알맞은 묶음(`tr.group`) 아래에 행을 더합니다.
+  상태 표시는 `badge--live`(서비스 중) · `badge--dev`(개발 중) · `badge--personal`(개인용) ·
+  `badge--private`(프라이빗 저장소) · `badge--video`(유튜브) 중에서 고릅니다.
+- **최종 수정** — 바닥의 `최종 수정: ○○○○년 ○월`을 바꿉니다.
 
-1. **경력** — 항목마다 회사명 · 직함 · 기간을 채우고, 성과는 `무엇을 · 어떻게 · 결과` 순서로 씁니다.
-   숫자(면적, 건수, 기간, 절감액)가 하나라도 들어가면 설득력이 크게 올라갑니다.
-2. **프로젝트** — 건축·경관 직군에서는 이미지가 곧 이력서입니다.
-   도면·투시도를 `assets/`에 넣고 항목 안에 `<img>`로 걸거나, 플리커 앨범을 링크하세요.
-3. **학력** — 학과명을 채우고, 재학 기간(2008–2020)에 대한 설명을 한 줄 덧붙이세요.
-4. 항목을 채울 때마다 그 `<li>`의 `class="entry is-placeholder"`에서 **`is-placeholder`를 지웁니다**
-   (점선 표시가 사라집니다).
-5. 전부 채운 뒤에는 두 가지를 삭제하세요.
-   - 본문 맨 위의 `<p class="draft-notice">` 안내 배너
-   - `<head>`의 `<meta name="robots" content="noindex">` — 이 줄이 있는 동안은 검색에 노출되지 않습니다.
+### 글을 고친 뒤 서체 다시 줄이기
 
-각 섹션에는 무엇을 어떻게 쓰면 되는지 HTML 주석으로 안내가 들어 있습니다.
+`fonts/`의 서체에는 지금 페이지에 쓰인 글자만 들어 있습니다. 새 글자가 들어가면 그 글자만 시스템 바탕체로 보이니,
+글을 고친 뒤에는 서체를 다시 줄여 주세요.
+
+```sh
+pip install fonttools brotli
+npm pack font-kopubworld && tar -xzf font-kopubworld-*.tgz   # package/fonts/ 에 원본 OTF
+python3 tools/subset_font.py package/fonts
+rm -rf package font-kopubworld-*.tgz
+```
 
 ## 알아 둘 점
 
-- **이메일이 소스에 그대로 노출됩니다.** 스팸이 늘면 `index.html` / `resume.html`의 `mailto:` 링크를
-  문의 폼(Formspree 등)으로 바꾸는 방법이 있습니다.
+- **서체 라이선스** — KoPubWorld바탕체는 문화체육관광부·한국출판인회의의 서체로, 무료로 쓰고 고쳐서 배포할 수 있습니다.
+  다만 줄인 파일(수정본)에는 'KoPub' 이름을 쓸 수 없어 `GL Batang Web`으로 이름을 바꿨고,
+  배포할 때는 라이선스를 함께 둬야 해서 `fonts/LICENSE-KoPub.md`를 넣어 두었습니다.
+- **이메일이 소스에 그대로 노출됩니다.** 개발자용 주소(`gregleeform@gmail.com`)만 씁니다.
 - **네이버 지도 클라이언트 키**가 `maps.html`에 들어 있습니다. 클라이언트 키라 노출 자체는 정상이지만,
   네이버 클라우드 플랫폼 콘솔에서 **웹 서비스 URL이 `https://gregleeform.github.io` 로 제한**되어 있는지
   확인해 두는 편이 좋습니다.
-- 명함의 탭 인디케이터는 `tokens.css`의 `--tab-width`(7rem)에 맞춰져 있습니다.
-  탭을 추가하거나 라벨을 크게 늘리면 `style.css`의 `nth-child` 규칙도 함께 손봐야 합니다.
+- 앱을 스토어에 올릴 때 개인정보처리방침 주소가 필요하면 `privacy.html`을 따로 만들어 바닥에 링크하세요.

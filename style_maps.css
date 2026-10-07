@@ -12,7 +12,7 @@ body {
 .map-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 1rem;
     height: 3.5rem;
     padding: 0 1rem;
