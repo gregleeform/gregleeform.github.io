@@ -380,7 +380,15 @@ address { font-style: normal; }
 @media (max-width: 560px) {
     .page { padding-top: 36px; }
 
-    .works thead { display: none; }
+    /* 열 제목은 화면에서만 숨기고 화면 읽기 프로그램에는 남긴다 */
+    .works thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
 
     .works tr,
     .works th,

@@ -38,23 +38,21 @@ def page_text():
 def rename(font, style):
     ps_name = f"GLBatangWeb-{style.capitalize()}"
     full_name = f"{FAMILY} {style.capitalize()}"
+    new_names = {1: FAMILY, 16: FAMILY, 4: full_name, 6: ps_name, 20: ps_name, 3: f"{ps_name}-subset"}
+    kept = []
     for record in font["name"].names:
         try:
             value = record.toUnicode()
         except UnicodeDecodeError:
-            continue
-        if "kopub" not in value.lower():
-            continue
-        if record.nameID in (1, 16):
-            record.string = FAMILY
-        elif record.nameID == 4:
-            record.string = full_name
-        elif record.nameID in (6, 20):
-            record.string = ps_name
-        elif record.nameID == 3:
-            record.string = f"{ps_name}-subset"
-        else:
-            record.string = value.replace("KoPubWorld", "GL").replace("KoPub", "GL")
+            value = ""
+        if "kopub" in value.lower():
+            if record.nameID not in new_names:
+                # 상표 문구(nameID 7) 등 원래 서체명이 든 나머지 기록은 바꿔 쓰지 않고 뺀다.
+                # 저작권 문구(nameID 0)에는 서체명이 없어 그대로 남는다.
+                continue
+            record.string = new_names[record.nameID]
+        kept.append(record)
+    font["name"].names = kept
     if "CFF " in font:
         cff = font["CFF "].cff
         cff.fontNames = [ps_name]
